@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/417772aec9.js" crossorigin="anonymous" defer></script>
+</head>
+<body> 
+    <div class="container">
+        <div id="form" class="form">
+            <h1 style="text-align: center;">Create Account</h1>
+            <div class="form-control">
+                <label for="username">Name</label>
+                 <!-- onfocus="formcon(this)" -->
+                <input type="text" name="username" id="username" maxlength="40" > 
+                <span>error</span>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+            </div>
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email">
+                <span>error</span>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+            </div>
+            <div class="form-control">
+                <label for="number">Number</label>
+                <input type="text" name="number" id="number" onkeypress='return validate(event)' maxlength="11">
+                <span>error</span>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+            </div>
+            <div class="form-control">
+            <label id="date_of_birth">Date of Birth<br /> </label>
+                <div class="select">
+                <select class="first" name="date_of_birth:day" tabindex="7">
+                    <option value="">
+                    <!-- -->
+                    </option>
+                    <option value="-">-</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+                <select name="date_of_birth:mon" tabindex="8">
+                    <option value="">
+                    <!-- -->
+                    </option>
+                    <option value="-">-</option>
+                    <option value="1">มกราคม</option>
+                    <option value="2">กุมภาพันธ์</option>
+                    <option value="3">มีนาคม</option>
+                    <option value="4">เมษายน</option>
+                    <option value="5">พฤษภาคม</option>
+                    <option value="6">มิถุนายน</option>
+                    <option value="7">กรกฎาคม</option>
+                    <option value="8">สิงหาคม</option>
+                    <option value="9">กันยายน</option>
+                    <option value="10">ตุลาคม</option>
+                    <option value="11">พฤศจิกายน</option>
+                    <option value="12">ธันวาคม</option>
+                </select>
+                <select name="date_of_birth:year" tabindex="9">
+                    <option value="">
+                    <!-- -->
+                    </option>
+                    <option value="2500">2500</option>
+                    <option value="2501">2501</option>
+                    <option value="2502">2502</option>
+                    <option value="1960">2503</option>
+                    <option value="1961">2504</option>
+                    <option value="1962">2505</option>
+                    <option value="1963">2506</option>
+                    <option value="1964">2507</option>
+                    <option value="1965">2508</option>
+                    <option value="1966">2509</option>
+                    <option value="1967">2510</option>
+                    <option value="1968">2511</option>
+                    <option value="1969">2512</option>
+                    <option value="1970">2513</option>
+                    <option value="1971">2514</option>
+                    <option value="1972">2515</option>
+                    <option value="1973">2516</option>
+                    <option value="1974">2517</option>
+                    <option value="1975">2518</option>
+                    <option value="1976">2519</option>
+                    <option value="1977">2520</option>
+                    <option value="1978">2521</option>
+                    <option value="1979">2522</option>
+                    <option value="1980">2523</option>
+                    <option value="1981">2524</option>
+                    <option value="1982">2525</option>
+                    <option value="1983">2526</option>
+                    <option value="1984">2527</option>
+                    <option value="1985">2528</option>
+                    <option value="1986">2529</option>
+                    <option value="1987">2530</option>
+                    <option value="1988">2531</option>
+                    <option value="1989">2532</option>
+                    <option value="1990">2533</option>
+                    <option value="1991">2534</option>
+                    <option value="1992">2535</option>
+                    <option value="1993">2536</option>
+                    <option value="1994">2537</option>
+                    <option value="1995">2538</option>
+                    <option value="1996">2539</option>
+                    <option value="1997">2540</option>
+                    <option value="1998">2541</option>
+                    <option value="1999">2542</option>
+                    <option value="2000">2543</option>
+                    <option value="2000">2544</option>
+                    <option value="2000">2545</option>
+                    <option value="2000">2546</option>
+                    <option value="2000">2547</option>
+                    <option value="2000">2548</option>
+                    <option value="2000">2549</option>
+                    <option value="2000">2550</option>
+                </select>
+                </div>
+            </div>
+            <div class="form-control">
+                <label for="idcard">ID card</label>
+                <input type="text" name="idcard" id="idcard" onkeypress='return validate(event)' maxlength="17">
+                <span>error</span>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+            </div>
+            <div class="form-control">
+                <label for="backidcard">Backidcard</label>
+                <input type="text" name="backidcard" id="backidcard" onkeypress="return ValidateAlpha(event)" maxlength="14">
+                <p id="EX">Example *AA1234567890</p>
+                <span>error</span>
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+            </div>
+            <button type="submit" id="submit" value="Submit">Submit</button>
+        </div>
+    </div>
+</body>
+</html>
