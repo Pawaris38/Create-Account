@@ -5,8 +5,26 @@ const email = document.getElementById("email");
 const number = document.getElementById("number");
 const idcard = document.getElementById("idcard");
 const backidcard = document.getElementById("backidcard");
+const openpop = document.getElementById("open2");
+const container = document.getElementById("container");
+const popup = document.getElementById("popup");
+const closepop = document.getElementById("close");
 
-
+openpop.addEventListener('click',()=>{
+    container.classList.add("active");
+    popup.classList.add("active");
+    
+    
+});
+closepop.addEventListener('click',()=>{
+    container.classList.remove("active");
+    popup.classList.remove("active");
+    setClear(username);
+    setClear(email);
+    setClear(number);
+    setClear(idcard);
+    setClear(backidcard);
+});
 number.addEventListener('keydown', function(e){
     if(e.key === "Backspace" || e.key === "Delete") return;
     if(e.target.value.length === 3){
@@ -96,6 +114,10 @@ function setSuccess(input){
     const formcontrol = input.parentElement;
     formcontrol.className = "form-control success";
 }
+function setClear(input){
+    const formcontrol = input.parentElement;
+    formcontrol.className = "form-control";
+}
 //ตัวอักษร 2 ตัว+ตัวเลข
 function ValidateAlpha(evt) {
     const backidcard = document.getElementById("backidcard");
@@ -132,8 +154,4 @@ function validate(evt) {
     return true;
   }
   
-//   function formcon(input){
-//       const ans = input.parentElement;
-//       console.log(ans);
-//       ans.className = "form-control";
-//   }
+
